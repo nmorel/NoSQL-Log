@@ -1,0 +1,91 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.github.nmorel.couchlog</groupId>
+  <artifactId>couchlog-appender</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>Couchlog :: Appender</name>
+  <description>Logback appender for Couchbase</description>
+
+  <prerequisites>
+    <maven>3.0.4</maven>
+  </prerequisites>
+
+  <repositories>
+    <repository>
+      <id>couchbase</id>
+      <name>Couchbase</name>
+      <url>http://files.couchbase.com/maven2/</url>
+    </repository>
+  </repositories>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <jdk.version>1.7</jdk.version>
+
+    <!-- Plugins version -->
+    <maven-compiler.version>2.5.1</maven-compiler.version>
+
+    <!-- Dependencies version -->
+    <couchbase.version>1.1.2</couchbase.version>
+    <slf4j.version>1.7.2</slf4j.version>
+    <logback.version>1.0.7</logback.version>
+    <junit.version>4.10</junit.version>
+  </properties>
+
+  <dependencies>
+    <!-- Couchbase dependencies -->
+    <dependency>
+      <groupId>couchbase</groupId>
+      <artifactId>couchbase-client</artifactId>
+      <version>${couchbase.version}</version>
+    </dependency>
+
+    <!-- Dependencies for logs -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
+      <version>${logback.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>${logback.version}</version>
+    </dependency>
+
+    <!-- Test dependencies -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+
+    <plugins>
+
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven-compiler.version}</version>
+        <configuration>
+          <source>${jdk.version}</source>
+          <target>${jdk.version}</target>
+          <encoding>${project.build.sourceEncoding}</encoding>
+        </configuration>
+      </plugin>
+
+    </plugins>
+
+  </build>
+
+</project>

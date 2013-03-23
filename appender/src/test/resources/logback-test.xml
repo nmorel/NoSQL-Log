@@ -1,0 +1,23 @@
+<configuration>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%-5level] %logger.%method\(%line\) : %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="COUCH" class="com.github.nmorel.couchlog.CouchbaseAppender">
+    <uri>http://localhost:8091/pools</uri>
+    <bucket>default</bucket>
+    <expiry>60</expiry>
+  </appender>
+
+  <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+    <appender-ref ref="COUCH" />
+  </appender>
+
+  <root level="trace">
+    <appender-ref ref="STDOUT" />
+    <appender-ref ref="COUCH" />
+  </root>
+</configuration>
