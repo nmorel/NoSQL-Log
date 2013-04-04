@@ -8,8 +8,9 @@
 
   <appender name="COUCH" class="com.github.nmorel.couchlog.CouchbaseAppender">
     <uri>http://localhost:8091/pools</uri>
-    <bucket>default</bucket>
-    <expiry>60</expiry>
+    <bucket>Log</bucket>
+    <pwd>couchlog</pwd>
+    <expiry>86400</expiry>
   </appender>
 
   <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
