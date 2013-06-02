@@ -1,26 +1,20 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.nmorel.nosqllog</groupId>
-    <artifactId>couchbase-logback-appender</artifactId>
+    <artifactId>redis-logback-appender</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>NoSQL Log :: Couchbase Logback appender</name>
-    <description>Logback appender for Couchbase</description>
+    <name>NoSQL Log :: Redis Logback appender</name>
+    <description>Logback appender for Redis</description>
 
     <prerequisites>
-        <maven>3.0.4</maven>
+        <maven>3.0.5</maven>
     </prerequisites>
-
-    <repositories>
-        <repository>
-            <id>couchbase</id>
-            <name>Couchbase</name>
-            <url>http://files.couchbase.com/maven2/</url>
-        </repository>
-    </repositories>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,18 +24,26 @@
         <maven-compiler.version>2.5.1</maven-compiler.version>
 
         <!-- Dependencies version -->
-        <couchbase.version>1.1.2</couchbase.version>
+        <jedis.version>2.1.0</jedis.version>
+        <gson.version>2.2.4</gson.version>
         <slf4j.version>1.7.5</slf4j.version>
         <logback.version>1.0.13</logback.version>
         <junit.version>4.11</junit.version>
     </properties>
 
     <dependencies>
-        <!-- Couchbase dependencies -->
+        <!-- Redis dependencies -->
         <dependency>
-            <groupId>couchbase</groupId>
-            <artifactId>couchbase-client</artifactId>
-            <version>${couchbase.version}</version>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>${jedis.version}</version>
+        </dependency>
+
+        <!-- Gson dependencies -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${gson.version}</version>
         </dependency>
 
         <!-- Dependencies for logs -->
