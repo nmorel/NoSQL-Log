@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.github.nmorel.couchlog</groupId>
-  <artifactId>couchlog-appender</artifactId>
+  <groupId>com.github.nmorel.nosqllog</groupId>
+  <artifactId>couchbase-logback-appender</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>Couchlog :: Appender</name>
+  <name>NoSQL Log :: Couchbase Logback appender</name>
   <description>Logback appender for Couchbase</description>
 
   <prerequisites>

@@ -6,7 +6,7 @@
     </encoder>
   </appender>
 
-  <appender name="COUCH" class="com.github.nmorel.couchlog.CouchbaseAppender">
+  <appender name="COUCH" class="com.github.nmorel.nosqllog.CouchbaseAppender">
     <uri>http://localhost:8091/pools</uri>
     <bucket>Log</bucket>
     <pwd>couchlog</pwd>

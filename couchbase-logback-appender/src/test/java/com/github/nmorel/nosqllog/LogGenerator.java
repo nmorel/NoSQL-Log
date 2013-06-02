@@ -1,4 +1,4 @@
-package com.github.nmorel.couchlog;
+package com.github.nmorel.nosqllog;
 
 import java.math.BigDecimal;
 import java.util.Random;

@@ -1,4 +1,4 @@
-package com.github.nmorel.couchlog;
+package com.github.nmorel.nosqllog;
 
 import java.io.IOException;
 import java.net.URI;
